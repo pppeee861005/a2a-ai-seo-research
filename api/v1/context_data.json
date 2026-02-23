@@ -1,0 +1,35 @@
+{
+  "api_version": "1.0",
+  "endpoint": "/api/v1/context_data",
+  "description": "Mock API response for fetching machine-readable context for specific entities.",
+  "parameters": {
+    "entity_type": "string (e.g., Hotel, LocalBusiness)",
+    "location_coordinate": "string (e.g., 34.0522,-118.2437)"
+  },
+  "example_response": {
+    "entity_type": "Hotel",
+    "entity_id": "hotel_12345",
+    "name": "Grand Hyatt Taipei",
+    "address": "No. 2, Songshou Rd, Xinyi District, Taipei City, Taiwan 110",
+    "geo": {
+      "latitude": 25.0330,
+      "longitude": 121.5654
+    },
+    "starRating": 5,
+    "priceRange": "$$",
+    "checkinTime": "15:00",
+    "checkoutTime": "12:00",
+    "nearby_attractions": [
+      {
+        "name": "Taipei 101",
+        "distance_km": 0.5
+      },
+      {
+        "name": "National Palace Museum",
+        "distance_km": 8.0
+      }
+    ],
+    "last_updated": "2026-02-23T10:00:00Z"
+  },
+  "note": "This is a mock response. In a real implementation, this endpoint would return dynamic data based on query parameters."
+}
