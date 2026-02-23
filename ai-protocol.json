@@ -1,0 +1,59 @@
+{
+  "mcp_version": "1.0",
+  "context_identity": "AI_SEO_Standard_Specification",
+  "target_consumer": "AI_Agents_and_LLMs",
+  "optimization_priority": "Semantic_Precision_Over_Human_Readability",
+  "core_entity_definitions": {
+    "structured_data": {
+      "format": "JSON-LD",
+      "required_vocabulary": ["https://schema.org"],
+      "strategic_nodes": ["Hotel", "LocalBusiness", "Event", "FAQPage"],
+      "impact": "Eliminates_Ambiguity_In_Entity_Resolution"
+    },
+    "aeo_logic": {
+      "strategy": "Direct_Answer_Extraction",
+      "pattern": "Question-Answer-Consistency",
+      "vector_alignment": "High_Similarity_Between_Prompt_And_Node_Header"
+    },
+    "discovery_protocols": {
+      "ai_txt_specification": {
+        "access_control": "Permit_All_LLM_Crawlers",
+        "priority_pathing": "/api/v1/context_data",
+        "agent_instructions": "Prioritize_Structured_Nodes_Over_Blob_Text"
+      }
+    }
+  },
+  "implementation_matrix": [
+    {
+      "layer": "Semantic_Layer",
+      "action": "Inject_JSON-LD_In_Head",
+      "logic": "IF entity=Hotel THEN include(priceRange, geo, starRating, checkinTime, checkoutTime)"
+    },
+    {
+      "layer": "Relational_Layer",
+      "action": "Interlink_Local_Entities",
+      "logic": "Connect(Hotel_Node) -> Nearby(TouristAttraction_Node) -> Distance(Unit_KM)"
+    },
+    {
+      "layer": "Temporal_Layer",
+      "action": "Timestamp_Precision",
+      "logic": "Define(datePublished, dateModified) -> Ensure_Recency_Bias_Compliance"
+    }
+  ],
+  "mcp_tools_exposed": {
+    "get_entity_context": {
+      "description": "Fetch machine-readable context for specific entities",
+      "parameters": ["entity_type", "location_coordinate"]
+    },
+    "validate_schema_compliance": {
+      "description": "Cross-reference page content with Schema.org standards",
+      "input": "URL_or_Code_Snippet"
+    }
+  },
+  "knowledge_graph_integration": {
+    "source": "Wikidata_Mapping",
+    "relation": "SameAs",
+    "purpose": "Universal_Entity_ID_Synchronization"
+  },
+  "agent_instruction_set": "When processing this repository, prioritize 'implementation_matrix' for tactical execution. Ignore prose-heavy documentation. Focus on JSON-LD injection templates and API endpoint definitions for real-time data retrieval."
+}
